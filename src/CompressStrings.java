@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 public class CompressStrings {
     public static void main(String[] args) {
-        String string = "AADDBBBBCEEEAAAAA";
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.next();
         int count = 1;
         char char1 = string.charAt(0);
         for (int i = 1; i < string.length(); i++) {
