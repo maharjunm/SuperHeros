@@ -1,0 +1,514 @@
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Nabil","Jbara",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("nabil_j","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","MH, Medical History###First Stage Validation###Follow-up validation###FV, Final validation"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Write" ),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"Patient-Documents-Upload"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Weaam","Alhammadi",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("weaam_a","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","MH, Medical History###First Stage Validation###Follow-up validation###FV, Final validation"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Write"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"Patient-Documents-Upload"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"William","Thompson",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("william_t","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"Emr-Reports"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Osama","Nassar",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("osama_n","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Baseline Vital Signs###Social and Medical History###Health Education"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"Emr-Reports"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Mohammad","Bassam",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("mohammad_b","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Baseline Vital Signs###Social and Medical History###Health Education"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Radah","Lambaz",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("radah_l","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Haya","Al Qadi",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("haya_aq","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Baseline Vital Signs###Social and Medical History###Health Education"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Muhannad","Mansour",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("muhannad_m","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Baseline Vital Signs###Social and Medical History###Health Education"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Firas","Qandil",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("firas_q","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Baseline Vital Signs###Social and Medical History###Health Education"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Salam","Samoor",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("salam_s","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Baseline Vital Signs###Social and Medical History###Health Education"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Yazan","Hatamilah",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("yazan_h","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Baseline Vital Signs###Social and Medical History###Health Education"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Sufiyan","Al Qasab",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("sufiyan_aq","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Surgeon Pre-Op Assessment and Treatment Plan###OBS, Surgical Diagnoses"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Ali","Al Ani",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("ali_aa","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Surgeon Pre-Op Assessment and Treatment Plan###OBS, Surgical Diagnoses"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Ashraf","Nabhan",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("ashraf_n","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Surgeon Pre-Op Assessment and Treatment Plan###OBS, Surgical Diagnoses"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Hanna","Janho",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("hanna_j","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Surgeon Pre-Op Assessment and Treatment Plan###OBS, Surgical Diagnoses"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Moukhallad","Saud",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("moukhallad_s","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Surgeon Pre-Op Assessment and Treatment Plan###OBS, Surgical Diagnoses"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Ashraf","Bustanji",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("ashraf_b","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Surgeon Pre-Op Assessment and Treatment Plan###OBS, Surgical Diagnoses"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Abdelraouf","Alhamad",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("abdelraouf_ah","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Initial Anesthesia Assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Hadeel","Al Ani",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("hadeel_aa","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Ammar","Subhi",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("ammar_s","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Initial Anesthesia Assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Zaid","Sabe Eleish",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("zaid_se","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","MD Initial Assessment###Physical Examination###OBS, Medical Diagnoses"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Birgit","Schonharting",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("birgit_s","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"Emr-Reports"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Hussein","Al Mahmoud",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("hussein_am","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Lina","Ali Mur",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("lina_am","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Ahmad","Abu Dosh",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("ahmad_ad","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Saleem","Abdel All",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("saleem_aa","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Zuhier","Hijazi",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("zuhier_h","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Sajdi","Moulla",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("sajdi_m","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Yazan","Kabboushi",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("yazan_k","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Ahmad","Alrosan",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("ahmad_ar","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Samar","Ismail",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("samar_i","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Razan","Alatoom",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("razan_a","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Rawan","Al-Ghunimat",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("rawan_ag","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Amani","Azbaki",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("amani_az","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Elisa","Birri",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("elisa_b","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"Emr-Reports"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Muntaha","Mashayekh",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("muntaha_m","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Qutaiba","Al Momani",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("qutaiba_am","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Naseer-Eldin","Joudeh",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("naseer_j","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Physiotherapy initial assessment"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Ruba","Hammad",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("ruba_h","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Alaa","Shehadeh",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("alaa_s","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Baseline Vital Signs###Social and Medical History###Health Education"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("F",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Hilana","Alkharouf",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("hilana_a","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates","Baseline Vital Signs###Social and Medical History###Health Education"),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Rasheed","Al Sammarraie",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("rasheed_as","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"Emr-Reports"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Marc","Schakal",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("marc_s","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"Emr-Reports"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Yahya","Kalilah",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("yahya_k","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"Emr-Reports"),((SELECT max(user_id) from users),"InPatient-Read");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Mohammed","Dhiabat",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("mohammed_d","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"Emr-Reports"),((SELECT max(user_id) from users),"InPatient-Read"),((SELECT max(user_id) from users),"InPatient-Patient-Movement"),((SELECT max(user_id) from users),"InPatient-Edit-BedTags-Only");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Suleiman","Al-Khattab",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("suleiman_ak","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"Emr-Reports"),((SELECT max(user_id) from users),"InPatient-Read"),((SELECT max(user_id) from users),"InPatient-Patient-Movement"),((SELECT max(user_id) from users),"InPatient-Edit-BedTags-Only");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
+
+
+
+
+
+INSERT INTO person (gender,creator, date_created, uuid)VALUES ("M",8,now(),uuid());
+INSERT INTO person_name (person_id, given_name, family_name,creator, date_created, uuid) VALUES ((SELECT max(person_id) FROM person),"Michael","Hagleitner",8, now(), uuid());
+INSERT INTO users (username, password, salt, creator, date_created, changed_by, person_id,retired,uuid) VALUES ("michael_h","5cf456be925a6b403454ea4bfbf444d406789cf05614bf164068ff29ea648dcea17f9f34137505d8c6dad3d1102bd8832ab34c545353cc47ec0532e7d6d2e938","bb27aaf6dd5590a09923659f89a7c51197273c058947a5bb902bd9a1eb19ed9b68152fc2d7d3e1f5d097b51b0720dac1acddb55a113c806cdeb2949170e9ba1a",8,now(),8,(SELECT max(person_id) FROM person),0,uuid());
+INSERT INTO user_property VALUES ((SELECT max(user_id) from users), "defaultLocale","en"),((SELECT max(user_id) from users),"favouriteObsTemplates",""),((SELECT max(user_id) from users),"favouriteWards",""),((SELECT max(user_id) from users),"lockoutTimestamp",""),((SELECT max(user_id) from users),"loginAttempts",0),((SELECT max(user_id) from users),"recentlyViewedPatients",'[]');
+INSERT INTO user_role VALUES ((SELECT max(user_id) from users),"Bahmni-User"),((SELECT max(user_id) from users),"Registration-Read"),((SELECT max(user_id) from users),"Clinical:FullAccess"),((SELECT max(user_id) from users),"Clinical:ReadOnly"),((SELECT max(user_id) from users),"Emr-Reports"),((SELECT max(user_id) from users),"InPatient-Read"),((SELECT max(user_id) from users),"InPatient-Patient-Movement"),((SELECT max(user_id) from users),"InPatient-Edit-BedTags-Only");
+INSERT INTO provider (person_id, creator, date_created, retired, uuid)VALUES ((SELECT max(person_id) FROM person),8,now(),0,uuid());
