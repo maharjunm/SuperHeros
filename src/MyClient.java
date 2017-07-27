@@ -18,12 +18,19 @@ public class MyClient {
                 dataOutputStream = new DataOutputStream(socket.getOutputStream());
                 string = scanner.next();
                 dataOutputStream.writeUTF(string);
-            } while ("q".equals(string));
+            } while (!"q".equals(string));
             socket.close();
             dataOutputStream.flush();
             dataOutputStream.close();
         } catch (Exception e ){
             e.printStackTrace();
         }
+
+        String string = null;
+        Scanner scanner = new Scanner(System.in);
+        do {
+            string = scanner.next();
+            System.out.println(string);
+        } while (!string.equals("q"));
     }
 }
