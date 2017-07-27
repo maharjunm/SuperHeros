@@ -1,7 +1,4 @@
-import jdk.nashorn.internal.runtime.regexp.joni.ScanEnvironment;
-
 import java.io.DataInputStream;
-import java.io.DataOutput;
 import java.io.DataOutputStream;
 import java.net.Socket;
 import java.util.Scanner;
@@ -13,24 +10,20 @@ public class MyClient {
             Scanner scanner = new Scanner(System.in);
             String string;
             DataOutputStream dataOutputStream;
-            do{
+            do {
                 socket = new Socket("localhost", 8088);
                 dataOutputStream = new DataOutputStream(socket.getOutputStream());
+                System.out.print("Give input to server : ");
                 string = scanner.next();
                 dataOutputStream.writeUTF(string);
+                dataOutputStream.flush();
+                DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
+                String outputFromServer = dataInputStream.readUTF();
+                System.out.println("The total is " + outputFromServer);
             } while (!"q".equals(string));
             socket.close();
-            dataOutputStream.flush();
-            dataOutputStream.close();
-        } catch (Exception e ){
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
-        String string = null;
-        Scanner scanner = new Scanner(System.in);
-        do {
-            string = scanner.next();
-            System.out.println(string);
-        } while (!string.equals("q"));
     }
 }
