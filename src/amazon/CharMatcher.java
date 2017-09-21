@@ -10,13 +10,17 @@ import java.util.Scanner;
 public class CharMatcher {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Enter number of Strings: ");
         String string = bufferedReader.readLine();
         int number = Integer.parseInt(string.substring(0, string.length()));
         String[] array = new String[number];
+        System.out.print("Enter Strings: ");
         for (int i = 0; i < number; i++) {
             array[i] = bufferedReader.readLine();
         }
+        System.out.print("Enter number of Characters: ");
         int length = Integer.parseInt(bufferedReader.readLine());
+        System.out.print("Enter Characters: ");
         char[] chars = new char[length];
         for (int i = 0; i < length; i++) {
             chars[i] = bufferedReader.readLine().charAt(0);
