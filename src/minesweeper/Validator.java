@@ -1,19 +1,18 @@
 package minesweeper;
 
 public class Validator {
-    public static boolean validate(String[] list) {
+    public static void validate(String[] list) throws Exception {
         for (int i = 0; i < list.length; i++) {
             if(list[i].length() != list.length)
-                return false;
+                throw new Exception("Invalid Input");
         }
-        return true;
+        return ;
     }
 
-    public static boolean validateUserInput(String string) {
+    public static void validateUserInput(String string) throws Exception {
         if(string.length() == 0)
-            return false;
-        if(string.charAt(0) == 'o' || string.charAt(0) == 'O' || string.charAt(0) == 'f' || string.charAt(0) == 'F')
-            return true;
-        return false;
+            throw new Exception("Invalid Input");
+        if(string.charAt(0) != 'o' && string.charAt(0) != 'O' && string.charAt(0) != 'f' && string.charAt(0) != 'F')
+            throw new Exception("Invalid Input");
     }
 }
