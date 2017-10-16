@@ -10,24 +10,29 @@ public class Game {
         try {
             Validator.validate(list);
             fields = new Square[list.length][list.length];
-            minesCount = 0;
-            for (int i = 0; i < list.length; i++) {
-                String singleField = list[i];
-                for (int j = 0; j < singleField.length(); j++) {
-                    if (singleField.charAt(j) == 'm') {
-                        fields[i][j] = new Square(true);
-                        minesCount++;
-                    } else if (singleField.charAt(j) == 'x') {
-                        fields[i][j] = new Square(false);
-                    } else {
-                        Printer.print("Not valid Input Try Again");
-                        break;
-                    }
-                }
-            }
+            minesCount = createMineFieldAndGetCount(list);
         } catch (Exception e) {
             Printer.print("Error:: " + e.getMessage());
         }
+    }
+
+    private int createMineFieldAndGetCount(String[] list) {
+        int minesCount = 0;
+        for (int i = 0; i < list.length; i++) {
+            String singleField = list[i];
+            for (int j = 0; j < singleField.length(); j++) {
+                if (singleField.charAt(j) == 'm') {
+                    fields[i][j] = new Square(true);
+                    minesCount++;
+                } else if (singleField.charAt(j) == 'x') {
+                    fields[i][j] = new Square(false);
+                } else {
+                    Printer.print("Not valid Input Try Again");
+                    break;
+                }
+            }
+        }
+        return minesCount;
     }
 
     public void start() throws Exception {
@@ -40,17 +45,12 @@ public class Game {
                 int[] indexes = InputParser.parseUserInput(string);
                 int i = indexes[0];
                 int j = indexes[1];
-                if (string.charAt(0) == 'o' || string.charAt(0) == 'O') {
-                    if (fields[i][j].isMine()) {
+                if (Validator.isitOpenFlag(string)) {
+                    if (isCellAMine(fields[i][j])) {
                         Printer.print("Game Has been end");
                         break;
                     } else {
-                        fields[i][j].setOpenFlag(true);
-                        Printer.printFields(fields);
-                        boolean isItAWin = checkForWin();
-                        if (isItAWin) {
-                            Printer.print("You won the Game \n Congratulations!!!");
-                        }
+                        addOpenFlagForCellAndCheckForWin(fields[i][j]);
                     }
                 } else {
                     Printer.printFields(fields);
@@ -62,6 +62,19 @@ public class Game {
             }
 
         }
+    }
+
+    public void addOpenFlagForCellAndCheckForWin(Square square) {
+        square.setOpenFlag(true);
+        Printer.printFields(fields);
+        boolean isItAWin = checkForWin();
+        if (isItAWin) {
+            Printer.print("You won the Game \n Congratulations!!!");
+        }
+    }
+
+    public boolean isCellAMine(Square square) {
+        return square.isMine();
     }
 
     private boolean checkForWin() {

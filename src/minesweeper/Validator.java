@@ -15,4 +15,8 @@ public class Validator {
         if(string.charAt(0) != 'o' && string.charAt(0) != 'O' && string.charAt(0) != 'f' && string.charAt(0) != 'F')
             throw new Exception("Invalid Input");
     }
+
+    public static boolean isitOpenFlag(String string) {
+        return string.charAt(0) == 'o' || string.charAt(0) == 'O';
+    }
 }
