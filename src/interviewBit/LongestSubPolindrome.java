@@ -27,6 +27,7 @@ public class LongestSubPolindrome {
                 }
             }
             if (i == j - 1) {
+                if (isIsAPolindrome(string.substring(i, j+1))) return string.substring(i, j+1);
                 i = i + 1;
                 j = string.length() - 1;
             } else {
