@@ -4,7 +4,7 @@ public class LinkedListImp {
     LinkedListImp node;
     int data;
 
-    LinkedListImp(LinkedListImp node, int data) {
+    public LinkedListImp(LinkedListImp node, int data) {
         this.node = node;
         this.data = data;
     }

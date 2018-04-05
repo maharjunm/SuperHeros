@@ -2,27 +2,10 @@ package interviewBit;
 
 public class Example {
     public static void main(String[] args) {
-        int[] array = new int[7];
-        for (int i = 0; i < 7; i++) {     // fill array
-            array[i] = i;
-        }
-        int[] randomArray = {0,0,0,0,0,2,0};
-        for (int i = 0; i < 7; i++) {    // shuffle array
-            printArray(array);
-            System.out.println(array[i] + " " + i + " " + array[randomArray[i]] + "  " +randomArray[i]);
-            int temp = array[i];
-//            int randomIndex = (int)(Math.random()) * 7;
-            int randomIndex = randomArray[i];
-            array[i]= array[randomIndex];
-            array[randomIndex] = temp;
-            printArray(array);
-            System.out.println("---------");
-        }
-
-
-        for (int i = 0; i < 7; i++) {    // print array
-            System.out.println(array[i]);
-        }
+        int[] array = {0};
+        int B = 1;
+        int C = 5;
+        System.out.println(Math.sqrt(536870912));
     }
 
     public static void printArray(int[] array) {
@@ -30,5 +13,25 @@ public class Example {
             System.out.print(array[i] + " ");
         }
         System.out.println();
+    }
+
+    public static int solve(int[] A, int B, int C) {
+        int count=0;
+        for(int i =0;i<A.length;i++) {
+            for(int j=0;j<A.length;j++) {
+                int number = Integer.parseInt((A[i] + "" + A[j]));
+                int number1 = Integer.parseInt((A[j] + "" + A[i]));
+                if(number>= B && number<=C) {
+                    System.out.println(number);
+                    count++;
+                }
+                if(number1 >= B && number1<=C) {
+                    count++;
+                    System.out.println(number1);
+                }
+            }
+        }
+        System.out.println(count);
+        return count;
     }
 }

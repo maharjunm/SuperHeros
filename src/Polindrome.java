@@ -2,29 +2,20 @@ import java.util.ArrayList;
 
 public class Polindrome {
     public static void main(String[] args) {
-        String string = "1442";
         Polindrome polindrome = new Polindrome();
-        System.out.println(polindrome.findNearestPolindrome(1442));
+        polindrome.findNearestPolindrome(1234);
     }
     public int findNearestPolindrome(int number) {
         String string = "" + number;
-//        char[] array = ("" + number).toCharArray();
-        ArrayList<Integer> arrayList = new ArrayList<>();
+        int length = string.length();
         for(int i =0;i<string.length();i++) {
-            char[] array = ("" + number).toCharArray();
-            array[i] = array[array.length-1-i];
-            String tempString = findString(array);
-            if(isPolindrome(tempString)) {
-                arrayList.add(Integer.parseInt(tempString));
+            System.out.println("---------------");
+            System.out.println(i + "-----" + (string.length()-i-1));
+            if(i<(string.length()-i-1)) {
+                System.out.println(string.substring(0, length-i-1) + "" + string.substring(0,i+1)) ;
             }
         }
-        int minDiff = arrayList.get(0);
-        for(int i=1;i<arrayList.size();i++) {
-            if((arrayList.get(i) - number) < minDiff) {
-                minDiff = arrayList.get(i);
-            }
-        }
-        return  minDiff;
+        return  1;
     }
 
     private boolean isPolindrome(String string) {

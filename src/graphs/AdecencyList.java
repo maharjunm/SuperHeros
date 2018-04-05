@@ -9,7 +9,7 @@ public class AdecencyList {
         Scanner scanner = new Scanner(System.in);
         int length = scanner.nextInt();
         String[] list = new String[length];
-        int count =0;
+        int count = 0;
         for(int i =0;i<length;i++) {
             list[count++] = scanner.nextLine();
         }

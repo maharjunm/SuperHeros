@@ -56,7 +56,6 @@ public class StringCombinations {
                 chars[k] = temp;
 //                System.out.println("------"+(k+1) +"---"+i);
 //                printString(chars);
-//                System.out.println("------------");
                 findComb(chars, k + 1);
                 temp = chars[i];
                 chars[i] = chars[k];
