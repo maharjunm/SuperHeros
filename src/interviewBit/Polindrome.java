@@ -1,7 +1,7 @@
 package interviewBit;
 
 import doors.Door;
-import org.omg.PortableInterceptor.INACTIVE;
+//import org.omg.PortableInterceptor.INACTIVE;
 
 public class Polindrome {
     public static void main(String[] args) {
